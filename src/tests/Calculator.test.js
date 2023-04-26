@@ -16,7 +16,7 @@ describe('Calculator', () => {
     expect(runningTotal.textContent).toEqual('4');
   })
 
-  it('should add one to four', () => {
+  it('should add 1 to 4', () => {
     const firstNum = container.getByTestId('number1');
     const plus = container.getByTestId('operator-add');
     const secondNum = container.getByTestId('number4');
@@ -29,7 +29,7 @@ describe('Calculator', () => {
     expect(runningTotal.textContent).toEqual('5');
   })
 
-  it('should subtract four from seven', () => {
+  it('should subtract 4 from 7', () => {
     const firstNum = container.getByTestId('number7');
     const subtract = container.getByTestId('operator-subtract');
     const secondNum = container.getByTestId('number4');
@@ -42,7 +42,7 @@ describe('Calculator', () => {
     expect(runningTotal.textContent).toEqual('3');
   })
 
-  it('should multiply three by five', () => {
+  it('should multiply 3 by 5', () => {
     const firstNum = container.getByTestId('number3');
     const multiply = container.getByTestId('operator-multiply');
     const secondNum = container.getByTestId('number5');
@@ -55,7 +55,7 @@ describe('Calculator', () => {
     expect(runningTotal.textContent).toEqual('15');
   })
 
-  it('should divide twenty-one by seven', () => {
+  it('should divide 21 by 7', () => {
     const firstNum = container.getByTestId('number2');
     const firstNum1 = container.getByTestId('number1');
     const divide = container.getByTestId('operator-divide');
@@ -103,12 +103,10 @@ describe('Calculator', () => {
     const plus = container.getByTestId('operator-add');
     const secondNum = container.getByTestId('number4');
     const equals = container.getByTestId('operator-equals');
-    const clear = container.getByTestId('clear');
     fireEvent.click(firstNum);
     fireEvent.click(plus);
     fireEvent.click(secondNum);
     fireEvent.click(equals);
-    fireEvent.click(clear);
     const runningTotal = container.getByTestId('running-total');
     expect(runningTotal.textContent).toEqual('0');
   })
