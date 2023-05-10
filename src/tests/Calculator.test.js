@@ -102,13 +102,18 @@ describe('Calculator', () => {
     const firstNum = container.getByTestId('number1');
     const plus = container.getByTestId('operator-add');
     const secondNum = container.getByTestId('number4');
+    const clear = container.getByTestId('clear');
     const equals = container.getByTestId('operator-equals');
     fireEvent.click(firstNum);
     fireEvent.click(plus);
     fireEvent.click(secondNum);
+    fireEvent.click(clear);
     fireEvent.click(equals);
     const runningTotal = container.getByTestId('running-total');
-    expect(runningTotal.textContent).toEqual('0');
+    expect(runningTotal.textContent).toEqual('1');
   })
 
 })
+
+
+
